@@ -48,8 +48,9 @@ SYMBOL = "XAUUSD"
 TF_LABEL = {"M15": "15min", "M30": "30min", "H1": "1h", "H4": "4h", "D1": "1day"}
 # How many hours of fresh ticks to fetch per refresh cycle
 LIVE_LOOKBACK_HOURS = 6
-# Refresh the signal cache every N seconds (aligns with M30 close)
-REFRESH_SECONDS = 60
+# Refresh every M30 cadence (1800s). The cached signal is served instantly
+# between refreshes. 60s was too aggressive — fetches ~1.5 GB/day on a VPS.
+REFRESH_SECONDS = 1800
 
 
 # ── shared state (protected by _lock) ────────────────────────────────────────
