@@ -235,7 +235,7 @@ function buildData(market) {
     current,
     confluenceTable,
     metrics: { flatShare },
-    equity: fakeEquity(candles),
+    equity: { pts: [0], isLen: 1 },  // replaced by real paper P&L from /api/paper
   };
 }
 
