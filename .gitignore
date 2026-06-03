@@ -1,0 +1,39 @@
+# ── secrets ──────────────────────────────────────────────────────────────────
+.env
+
+# ── raw tick data (too large for git — regenerate with scripts/backfill_history.py) ──
+data/raw/dukascopy/
+data/raw/twelvedata/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ── Old backtest JSONs (keep latest.* only) ───────────────────────────────────
+reports/backtest_*.json
+reports/backtest_*.md
+
+# ── Paper trading live state (local only, reset when you want a clean start) ──
+reports/paper_signals.jsonl
+reports/paper_trades.jsonl
+reports/paper_book.json
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/

@@ -1,0 +1,9 @@
+# XAU/USD signal engine — runtime + dev dependencies
+pandas>=2.2
+numpy>=1.26
+pyarrow>=14          # parquet for data/clean
+pytest>=8            # rule unit tests
+
+# Optional providers (live/paper watch). Install only what you use.
+# MetaTrader5            # broker feed (Windows)
+# requests               # not required: stdlib urllib is used for Twelve Data
